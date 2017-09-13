@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarryPotterShoppingCart", "HarryPotterShoppingCart\HarryPotterShoppingCart.csproj", "{D0646200-2C13-4E32-A13E-E876AC191B4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarryPotterShoppingCart.Tests", "HarryPotterShoppingCart.Tests\HarryPotterShoppingCart.Tests.csproj", "{B55F4E03-B25D-4FF9-ACEA-BDCA991FD77F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D0646200-2C13-4E32-A13E-E876AC191B4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0646200-2C13-4E32-A13E-E876AC191B4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0646200-2C13-4E32-A13E-E876AC191B4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B55F4E03-B25D-4FF9-ACEA-BDCA991FD77F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B55F4E03-B25D-4FF9-ACEA-BDCA991FD77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B55F4E03-B25D-4FF9-ACEA-BDCA991FD77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B55F4E03-B25D-4FF9-ACEA-BDCA991FD77F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
