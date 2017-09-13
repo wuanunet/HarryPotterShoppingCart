@@ -7,8 +7,15 @@ namespace HarryPotterShoppingCart.Tests
 {
     public class ShoppingCartServiceTests
     {
+        private readonly ShoppingCartService _target;
+
+        public ShoppingCartServiceTests()
+        {
+            this._target = new ShoppingCartService();
+        }
+
         [Fact]
-        public void Calculate_Buy_Qty_1_HerryPotter1_TotalPrice_Should_be_100()
+        public void CalculateTest_購買HerryPotter第一集一本_沒有折扣_購物車費用應為_100_元()
         {
             //// Arrange
             var expected = 100;
@@ -20,15 +27,13 @@ namespace HarryPotterShoppingCart.Tests
                 }
             };
 
-            var target = new ShoppingCartService();
             decimal actual = 0m;
 
             //// Act
-            actual = target.Calculate(shoppingCart);
+            actual = this._target.Calculate(shoppingCart);
 
             //// Assert
             actual.Should().Be(expected);
-
         }
     }
 }
