@@ -1,4 +1,5 @@
-﻿using HarryPotterShoppingCart.Models;
+﻿using System.Linq;
+using HarryPotterShoppingCart.Models;
 
 namespace HarryPotterShoppingCart
 {
@@ -6,7 +7,9 @@ namespace HarryPotterShoppingCart
     {
         public decimal Calculate(ShoppingCartEntity shoppingCart)
         {
-            throw new System.NotImplementedException();
+            var totalPrice = shoppingCart.Products.Sum(s => s.Price * s.Qty);
+
+            return totalPrice;
         }
     }
 }
