@@ -4,8 +4,6 @@ using Xunit;
 
 namespace HarryPotterShoppingCart.Tests
 {
-
-
     public class ShoppingCartServiceTests
     {
         private readonly ShoppingCartService _target;
