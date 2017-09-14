@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShoppingCartServiceTests.cs" />
+    <Compile Include="TestDataSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HarryPotterShoppingCart\HarryPotterShoppingCart.csproj">
