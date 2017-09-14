@@ -24,7 +24,8 @@ namespace HarryPotterShoppingCart
                 { 1 , 1 },
                 { 2 , 0.95m },
                 { 3 , 0.9m },
-                { 4 , 0.8m }
+                { 4 , 0.8m },
+                { 5 , 0.75m }
             };
 
             var productUnitCount = products.GroupBy(s => s.Name).Count();
