@@ -19,26 +19,20 @@ namespace HarryPotterShoppingCart
 
         private decimal GetDisCountRate(List<ProductEntity> products)
         {
-            decimal disCountRate = 1;
+            var disCountRule = new Dictionary<int, decimal>
+            {
+                { 1 , 1 },
+                { 2 , 0.95m },
+                { 3 , 0.9m },
+                { 4 , 0.8m }
+            };
+
+            decimal result = 1;
             var productUnitCount = products.GroupBy(s => s.Name).Count();
 
-            switch (productUnitCount)
-            {
-                case 1:
-                    disCountRate = 1;
-                    break;
-                case 2:
-                    disCountRate = 0.95m;
-                    break;
-                case 3:
-                    disCountRate = 0.9m;
-                    break;
-                case 4:
-                    disCountRate = 0.8m;
-                    break;
-            }
+            result = disCountRule.FirstOrDefault(s => s.Key == productUnitCount).Value;
 
-            return disCountRate;
+            return result;
         }
     }
 }
