@@ -58,6 +58,21 @@ namespace HarryPotterShoppingCart.Tests
                         new ProductEntity {Qty = 1, Name = "HerryPotter4", Price = 100}
                     }
                 }, 320M
+            },
+            //// 第五個測試案例：購買哈利波特第一、二、三、四、五集各一本，享有折扣 25%，購物車金額應為 375 元
+            new object[]
+            {
+                new ShoppingCartEntity
+                {
+                    Products = new List<ProductEntity>
+                    {
+                        new ProductEntity {Qty = 1, Name = "HerryPotter1", Price = 100},
+                        new ProductEntity {Qty = 1, Name = "HerryPotter2", Price = 100},
+                        new ProductEntity {Qty = 1, Name = "HerryPotter3", Price = 100},
+                        new ProductEntity {Qty = 1, Name = "HerryPotter4", Price = 100},
+                        new ProductEntity {Qty = 1, Name = "HerryPotter5", Price = 100}
+                    }
+                }, 375M
             }
 
         };

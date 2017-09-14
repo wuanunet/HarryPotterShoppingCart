@@ -27,10 +27,13 @@ namespace HarryPotterShoppingCart
                 { 4 , 0.8m }
             };
 
-            decimal result = 1;
             var productUnitCount = products.GroupBy(s => s.Name).Count();
 
-            result = disCountRule.FirstOrDefault(s => s.Key == productUnitCount).Value;
+            decimal result = disCountRule.FirstOrDefault(s => s.Key == productUnitCount).Value;
+            if (result == 0)
+            {
+                result = 1;
+            }
 
             return result;
         }
