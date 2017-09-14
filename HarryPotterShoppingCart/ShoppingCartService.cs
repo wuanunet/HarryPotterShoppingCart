@@ -30,6 +30,9 @@ namespace HarryPotterShoppingCart
                 case 2:
                     disCountRate = 0.95m;
                     break;
+                case 3:
+                    disCountRate = 0.9m;
+                    break;
             }
 
             return disCountRate;
