@@ -8,11 +8,20 @@ namespace HarryPotterShoppingCart
     {
         public decimal Calculate(ShoppingCartEntity shoppingCart)
         {
+            var totalPrice = 0m;
             var products = shoppingCart.Products;
             var disCountRate = GetDisCountRate(products);
 
-            var totalPrice = products.Sum(s => s.Price * s.Qty);
+            var distinctProducts = products.GroupBy(s => s.Name).Select(s => s.FirstOrDefault()).ToList();
+            var exceptProducts = products.Except(distinctProducts).ToList();
+
+            totalPrice = distinctProducts.Sum(s => s.Price * s.Qty);
             totalPrice = totalPrice * disCountRate;
+
+            if (exceptProducts.Any())
+            {
+                totalPrice += exceptProducts.Sum(s => s.Price * s.Qty);
+            }
 
             return totalPrice;
         }
